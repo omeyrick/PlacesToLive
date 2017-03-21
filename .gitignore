@@ -56,3 +56,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Other stuff
+Data/Base_data/
+.idea
