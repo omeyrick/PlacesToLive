@@ -1,0 +1,101 @@
+rank,postcode,street name,locality,scores highly on,scores less well on
+1,SK10 5SG,Shrigley Road,Bollington,Activities,Childcare
+2,DE7 6DB,Coachways,Mapperley,Schools,Childcare
+3,CV7 7HG,Packington Lane,Packington,Nurseries,NCT community
+4,PR6 8LY,Lower Cophurst Lane,Chorley,Activities,Childcare
+5,OL3 5TS,Tame Lane,Delph,Other mums,NCT community
+6,HP3 0PT,Birch Lane,Flaunden,Activities,Childcare
+7,WA4 4QJ,Bentley's Farm Lane,Higher Whitley,Schools,Childcare
+8,BL7 9QL,Belmont Road,Bolton,Activities,NCT community
+9,SO32 2NU,Snakemoor Lane,Southampton,Childcare,Schools
+10,LE6 0HA,Bradgate Road,Newtown Linford,Activities,NCT community
+11,CM13 3LX,Brentwood Road,Brentwood,Schools,Childcare
+12,WD3 3JH,Little Green Lane,Croxley Green,Activities,Childcare
+13,WA15 0QG,Ashley Road,Altrincham,Schools,Childcare
+14,BB3 0LY,Tockholes Road,Darwen,Other mums,NCT community
+15,ME20 7AH,Forstal Road,Aylesford,NCT community,Childcare
+16,ME6 5LJ,Snodland Road,Snodland,Childcare,Schools
+17,LE9 7TD,Hinckley Road,Thurlaston,Schools,NCT community
+18,RG10 0DR,School Road,"Hurst, Reading",Other mums,Childcare
+19,CR6 9PD,Harrow Road,Warlingham,Activities,NCT community
+20,BS31 2TN,Charlton Road,Keynsham,Other mums,Childcare
+21,B75 6LA,Tamworth Road,Sutton Coldfield,Schools,NCT community
+22,LE9 7TF,Enderby Road,Thurlaston,Activities,Schools
+23,WA4 4JL,Marsh Lane,Lower Whitley,Activities,Schools
+24,OL3 5NA,Old Pack Horse Road,Oldham,Childcare,Schools
+25,AL3 7DJ,Mansdale Road,St Albans,Schools,Childcare
+26,LU2 9PZ,Lower Harpenden Road,East Hyde,Childcare,NCT community
+27,SL5 8AY,Swinley Road,Bracknell Forest,Other mums,Schools
+28,KT16 0EE,Chobham Lane,Chertsey,Childcare,Schools
+29,NG15 8AE,Main Street,Linby,Activities,Childcare
+30,GU19 5HT,Bracknell Road,Bagshot,Activities,Childcare
+31,PO7 5BH,Geoffrey Avenue,Waterlooville,Activities,Other mums
+32,SO32 2AS,Whitegates,Durley,Childcare,Schools
+33,DE22 2NP,Kedleston Road,Derby,Schools,Childcare
+34,SL8 5QY,Marlow Road,"Bourne End, Bucks",Childcare,Schools
+35,B61 0BS,Middle Road,Bromsgrove,Other mums,NCT community
+36,DE65 6LR,Hedge Lane,Etwall,Childcare,Schools
+37,AL3 7DB,North Common,St Albans,Childcare,NCT community
+38,BA2 9HE,Crosspost Lane,Marksbury,Activities,Childcare
+39,SK9 5PB,Newlands,Wilmslow,Schools,Childcare
+40,PR26 7TA,Cocker Bar Road,Leyland,Other mums,Childcare
+41,HP5 1TY,Stony Lane,Chesham,Other mums,Schools
+42,AL3 8ET,Chequers Hill,St Albans,Activities,Childcare
+43,UB7 0AS,Acccomodation Lane,Harmondsworth,Schools,Other mums
+44,RG12 9FR,London Road,Bracknell,NCT community,Childcare
+45,RG10 0BN,Waltham Road,Twyford,Activities,Childcare
+46,DY9 9XT,Madeley Road,Belbroughton,Schools,Childcare
+47,RM14 3RS,China Lane,Upminster,Schools,Childcare
+48,GL4 0UU,Upton Lane,Brookthorpe,Childcare,NCT community
+49,CV10 7QD,Nuthurst Lane,Astley,Schools,Childcare
+50,WD3 6ER,Latimer Road,Rickmansworth,Schools,Childcare
+51,MK45 4SH,Barton Road,Bedford,Childcare,NCT community
+52,TW14 8NU,Stanwell Road,Feltham,Schools,Childcare
+53,TW6 2BW,Cranford Lane,Harlington,Schools,Childcare
+54,GU24 8TE,Chertsey Road,Woking,NCT community,Childcare
+55,ME19 5JJ,Stangate Road,Birling,Activities,Childcare
+56,SL4 4BE,Winkfield Road,Windsor,NCT community,Schools
+57,AL4 8LR,Dale Avenue,Wheathampstead,Activities,Childcare
+58,S18 7SD,Cowley Lane,Dronfield,Schools,Childcare
+59,SO30 2DY,Mill Hill,Southampton,Schools,Childcare
+60,MK45 4SG,Harlington road,Sharpenhoe,Childcare,NCT community
+61,RG40 5QL,Maidenhead Road,Wokingham,Other mums,Childcare
+62,FY6 7LD,Mains Lane,Poulton-le-Fylde,Childcare,Schools
+63,HP10 8PH,Gravelly Way,High Wycombe,Other mums,Schools
+64,CH1 6HF,Capenhurst Lne,Capenhurst,Other mums,Childcare
+65,TW6 3FE,Bedfont Close,Hounslow,Schools,Childcare
+66,LE18 3SH,Newton Lane,Wigston,Activities,Childcare
+67,GU24 8TL,Brick Hill,Woking,NCT community,Childcare
+68,HU10 6DN,Oak Hill,Willerby,Childcare,Schools
+69,ME19 5HW,Brook Road,Leybourne,Childcare,NCT community
+70,PO17 6DX,Portchester Lane,Southwick,Schools,Childcare
+71,DE22 4ND,Ashbourne Road,Mackworth,Schools,Childcare
+72,WN8 8UY,Turnberry,Lathom,Schools,Childcare
+73,NN4 0AN,Leys Lane,Great Houghton,Childcare,NCT community
+74,WS15 4NG,Common Side,Rugeley,Schools,Childcare
+75,ST7 3EJ,Brattswood Drive,Church Lawton,NCT community,Schools
+76,BB10 4UD,Barcroft Green,Burnley,Schools,NCT community
+77,SS17 9HN,High Road,Stanford-le-hope,Schools,Childcare
+78,GU24 8TN,Chestnut Lane,Chobham,NCT community,Childcare
+79,ME19 5JB,Bull Road,West Maling,Childcare,NCT community
+80,RG10 8BU,High Street,Wargrave,Schools,Childcare
+81,ST11 9ET,Roughcoate Lane,Stoke-on-trent,Schools,Childcare
+82,L39 0EQ,Heyescroft,Ormskirk,Schools,Childcare
+83,GL10 3EE,Haresfield,Stonehouse,Schools,NCT community
+84,TS8 0AG,Muff Lane,Newby,Schools,Childcare
+85,NW8 7QQ,St Edmunds Terrace,Primrose Hill,Schools,Childcare
+86,GU24 8QP,Burrow Hill Green,Chobham,Schools,Childcare
+87,PL12 6PA,Fore Street,Cargreen,Other mums,Schools
+88,NW8 7RU,Charlbert Street,St Johns Wood,Schools,Childcare
+89,PE7 3UX,Allerton Garth,Alwalton,Childcare,Schools
+90,MK17 8BQ,Broughton Road,Salford,Schools,Other mums
+91,RH17 6DT,Handcross Road,Haywards Heath,Childcare,Schools
+92,RH6 9GZ,Mead Place,Smallfield,Childcare,Schools
+93,HU7 5UZ,Glebe Road,Wawne,Schools,Childcare
+94,NN7 1AD,Bedford Road,Little Houghton,Schools,NCT community
+95,SE24 9PR,Red Post Hill,Herne Hill,Activities,Schools
+96,SE5 8RS,Denmark Hill,Camberwell,Childcare,Other mums
+97,BS40 8QR,Wells Road,Bristol,Schools,Childcare
+98,CW9 6NR,Lodge Lane,Northwich,Schools,Other mums
+99,L40 6JG,Spa Lane,Omskirk,Schools,Childcare
+100,RG24 9LS,Kiln Road,Basingstoke,Childcare,Schools
