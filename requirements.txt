@@ -12,5 +12,7 @@ python-dateutil==2.6.0
 pytz==2016.10
 six==1.10.0
 Werkzeug==0.12
+#changes
 setuptools==27.2.0
 wheel==0.29.0
+pip==9.0.1
