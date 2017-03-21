@@ -15,9 +15,4 @@ Werkzeug==0.12
 setuptools==27.2.0
 wheel==0.29.0
 pip==9.0.1
-openssl==1.0.2k
-readline==6.2
 sqlite==3.13.0
-tk==8.5.18
-xz==5.2.2
-zlib==1.2.8
