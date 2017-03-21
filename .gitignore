@@ -59,4 +59,5 @@ target/
 
 # Other stuff
 Data/Base_data/
-.idea
+/.idea
+/.ipynb_checkpoints
