@@ -101,7 +101,6 @@ def get_airports(links):
 
 get_airports(links)
 
-"""
 
 df_qol = pd.read_csv("/Users/OliverM/Code/New Home/Data/Halifax_quality_of_life.csv")
 links = df_qol['link'].values.tolist()
@@ -125,3 +124,30 @@ def get_qol_locations(links):
     return df
 
 get_qol_locations(links)
+
+"""
+
+df_times = pd.read_csv("/Users/OliverM/Code/PlacesToLive/data/Times_places_to_live.csv")
+links = df_times['Link'].values.tolist()
+links2 = df_times['Link2'].values.tolist()
+
+def get_times_locations(links):
+    results = []
+
+    for i in links:
+        response = requests.get(i)
+        html = response.text
+        soup = BeautifulSoup(html, 'lxml')
+        try:
+            location = soup.select_one("span[class*=geo-dec]").text
+            results.append((i, location))
+            print(i, location)
+        except AttributeError:
+            pass
+
+    df = pd.DataFrame(results, columns=['link', 'location'])
+    df.to_csv('times_places2.csv')
+    return df
+
+get_times_locations(links2)
+
