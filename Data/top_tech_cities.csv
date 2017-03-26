@@ -1,17 +1,1 @@
-city,digital company growth,number of digital companies,postcode
-Glasgow,0.03,0,G2 1DU
-Edinburgh,0.33,0,EH1 1YJ
-Belfast,0.73,0,BT1 5GS
-Leeds,0.07,0,LS1 3AD
-Sheffield,0.17,0,S1 2HH
-Greater Manchester,0.70,0,M60 2LA
-Birmingham,0.51,0,B3 3DQ
-Liverpool,1.19,0,L2 3SW
-Reading,0.05,0,RG1 1QH
-Cardiff,0.87,0,CF10 3ND
-Bath & Bristol,0.05,0,BS1 5TR
-Bournemouth & Poole,2.12,0,BH2 6DY
-Brighton & Hove,0.91,0,BN1 1JA
-Inner London,0.92,0,SE1 2AA
-Oxford,0.24,0,OX1 1BX
-Cambridge,0.46,0,CB2 1BY
+﻿city,digital company growth,number of digital companies,postcodeInner London,0.92,300169,SE1 2AAGreater Manchester,0.7,62653,M60 2LAReading,0.05,45269,RG1 1QHBirmingham,0.51,36802,B3 3DQBath & Bristol,0.05,35924,BS1 5TRCambridge,0.46,30219,CB2 1BYOxford,0.24,26367,OX1 1BXGlasgow,0.03,25992,G2 1DUEdinburgh,0.33,25109,EH1 1YJLeeds,0.07,23734,LS1 3ADLiverpool,1.19,23407,L2 3SWSouthampton,,22737,SO14 7LYNewcastle,,20090,NE1 8SFNottingham,,19741,NG1 2BSSheffield,0.17,18961,S1 2HHCardiff,0.87,17471,CF10 3NDBournemouth & Poole,2.12,15763,BH2 6DYExeter,,14018,EX1 1JJBrighton & Hove,0.91,12614,BN1 1JABelfast,0.73,9058,BT1 5GS
