@@ -154,40 +154,55 @@ get_times_locations(links2)
 
 df_stations = pd.read_csv("/Users/OliverM/Code/PlacesToLive/data/Base_data/station_data_test.csv")
 tlc = df_stations['TLC'].values.tolist()
+df_train_master = pd.DataFrame(columns=['station', 'time', 'changes'])
 
 def get_train_times(tlc):
     links = []
-    strip_list = []
-    clean_list = []
 
-    for name in tlc:
-        url = 'http://ojp.nationalrail.co.uk/service/timesandfares/London/'+name+'/today/1400/dep?excludeslowertrains'
+    for station in tlc:
+        url = 'http://ojp.nationalrail.co.uk/service/timesandfares/London/'+station+'/today/1400/dep?excludeslowertrains'
         links.append[url]
 
     for i in links:
+        df_station_times = pd.DataFrame(columns=['station', 'time', 'changes'])
         response = requests.get(url)
         html = response.text
         soup = BeautifulSoup(html, 'lxml')
         try:
-            location = soup.select("table td[class*=dur]")
-            
-            for i in location:
-               strip_list.append(i.text.strip())
-    
+            time = soup.select("table td[class*=dur]")
+            changes = soup.select("table a[class*=changestip-link]")
+            strip_list = []
+            clean_list = []
+            change_list = []
+
+            for i in time:
+                strip_list.append(i.text.strip())
+
             for n in strip_list:
-                clean_list.append(n.replace('\n\t\t',''))
-        
+                clean_list.append(n.replace('h\n\t\t','.'))
+
+            for i in changes:
+                change_list.append(i.text.strip())
+
+            print(clean_list)
+            print(change_list)
+
+            df_station_times['station'] = station
+            df_station_times['changes'] = change_list
+            df_station_times['time'] = clean_list
+
+            print(df_station_times)
+
+            result = pd.concat([df_master_times, df_station_times])
+
         except AttributeError:
             pass
 
-    df = pd.DataFrame(results, columns=['link', 'location'])
-    df.to_csv('times_places2.csv')
-    return df
-
-get_times_locations(links2)
+        return result
 
 # One off test
 
+"""
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
@@ -197,12 +212,18 @@ response = requests.get(url)
 html = response.text
 soup = BeautifulSoup(html, 'lxml')
 
-location = soup.select_one("table[class*=dur]").text
-print(location)
+time = soup.select("table td[class*=dur]")
+changes = soup.select("table a[class*=changestip-link]")
+strip_list = []
+clean_list = []
+change_list = []
 
-#results.append((i, location))
-#print(i, location)
+for i in time:
+    strip_list.append(i.text.strip())
 
+for n in strip_list:
+    clean_list.append(n.replace('\n\t\t',''))
 
-
-
+for i in changes:
+    change_list.append(i.text.strip())
+"""

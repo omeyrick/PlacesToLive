@@ -58,6 +58,6 @@ docs/_build/
 target/
 
 # Other stuff
-Data/Base_data/
+data/Base_data/
 /.idea
 /.ipynb_checkpoints
