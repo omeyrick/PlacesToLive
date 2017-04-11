@@ -152,12 +152,13 @@ get_times_locations(links2)
 
 """
 
-df_stations = pd.read_csv("/Users/OliverM/Code/PlacesToLive/data/Base_data/station_data_test.csv")
-tlc = df_stations['TLC'].values.tolist()
-df_train_master = pd.DataFrame(columns=['station', 'time', 'changes'])
+#df_stations = pd.read_csv("/Users/OliverM/Code/PlacesToLive/data/Base_data/station_data_test.csv")
+#tlc = df_stations['TLC'].values.tolist()
+tlc = ['SMD', 'BAN']
 
 def get_train_times(tlc):
     links = []
+    df_train_master = pd.DataFrame(columns=['station', 'time', 'changes'])
 
     for station in tlc:
         url = 'http://ojp.nationalrail.co.uk/service/timesandfares/London/'+station+'/today/1400/dep?excludeslowertrains'
@@ -193,12 +194,14 @@ def get_train_times(tlc):
 
             print(df_station_times)
 
-            result = pd.concat([df_master_times, df_station_times])
+            result = pd.concat([df_train_master, df_station_times])
 
         except AttributeError:
             pass
 
         return result
+
+print(get_train_times(tlc))
 
 # One off test
 
