@@ -125,7 +125,6 @@ def get_qol_locations(links):
 
 get_qol_locations(links)
 
-"""
 
 df_times = pd.read_csv("/Users/OliverM/Code/PlacesToLive/data/Times_places_to_live.csv")
 links = df_times['Link'].values.tolist()
@@ -150,4 +149,60 @@ def get_times_locations(links):
     return df
 
 get_times_locations(links2)
+
+"""
+
+df_stations = pd.read_csv("/Users/OliverM/Code/PlacesToLive/data/Base_data/station_data_test.csv")
+tlc = df_stations['TLC'].values.tolist()
+
+def get_train_times(tlc):
+    links = []
+    strip_list = []
+    clean_list = []
+
+    for name in tlc:
+        url = 'http://ojp.nationalrail.co.uk/service/timesandfares/London/'+name+'/today/1400/dep?excludeslowertrains'
+        links.append[url]
+
+    for i in links:
+        response = requests.get(url)
+        html = response.text
+        soup = BeautifulSoup(html, 'lxml')
+        try:
+            location = soup.select("table td[class*=dur]")
+            
+            for i in location:
+               strip_list.append(i.text.strip())
+    
+            for n in strip_list:
+                clean_list.append(n.replace('\n\t\t',''))
+        
+        except AttributeError:
+            pass
+
+    df = pd.DataFrame(results, columns=['link', 'location'])
+    df.to_csv('times_places2.csv')
+    return df
+
+get_times_locations(links2)
+
+# One off test
+
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+
+url = 'http://ojp.nationalrail.co.uk/service/timesandfares/London/SMD/today/0800/dep?excludeslowertrains'
+response = requests.get(url)
+html = response.text
+soup = BeautifulSoup(html, 'lxml')
+
+location = soup.select_one("table[class*=dur]").text
+print(location)
+
+#results.append((i, location))
+#print(i, location)
+
+
+
 
