@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import re
 import pandas as pd
 
 """
@@ -152,54 +153,62 @@ get_times_locations(links2)
 
 """
 
-#df_stations = pd.read_csv("/Users/OliverM/Code/PlacesToLive/data/Base_data/station_data_test.csv")
-#tlc = df_stations['TLC'].values.tolist()
-tlc = ['SMD', 'BAN']
+df_stations = pd.read_csv("/Users/OliverM/Code/PlacesToLive/data/Base_data/station_data.csv")
+tlc = df_stations['TLC'].values.tolist()
+#tlc = ['SMD', 'BAN']
 
 def get_train_times(tlc):
     links = []
-    df_train_master = pd.DataFrame(columns=['station', 'time', 'changes'])
+    df_train_master = pd.DataFrame(columns=['station', 'to', 'time', 'changes'])
 
     for station in tlc:
-        url = 'http://ojp.nationalrail.co.uk/service/timesandfares/London/'+station+'/today/1400/dep?excludeslowertrains'
-        links.append[url]
+        url = 'http://ojp.nationalrail.co.uk/service/timesandfares/'+station+'/London/today/0800/dep?excludeslowertrains'
+        print(url)
+        links.append(url)
 
     for i in links:
-        df_station_times = pd.DataFrame(columns=['station', 'time', 'changes'])
-        response = requests.get(url)
+        df_station_times = pd.DataFrame(columns=['station', 'to', 'time', 'changes'])
+        response = requests.get(i)
         html = response.text
         soup = BeautifulSoup(html, 'lxml')
         try:
+            dep = soup.select("table td[class*=from]")
+            dest = soup.select("table td[class*=to]")
             time = soup.select("table td[class*=dur]")
-            changes = soup.select("table a[class*=changestip-link]")
-            strip_list = []
-            clean_list = []
+            changes = soup.select("table td[class*=chg]")
+            time_list = []
             change_list = []
+            dest_list = []
+            dep_list = []
 
-            for i in time:
-                strip_list.append(i.text.strip())
+            for a in dest:
+                dest_list.append(a.text.strip())
 
-            for n in strip_list:
-                clean_list.append(n.replace('h\n\t\t','.'))
+            for b in dep:
+                dep_list.append(b.text.strip())
 
-            for i in changes:
-                change_list.append(i.text.strip())
+            for c in time:
+                time_list.append(c.text.strip())
 
-            print(clean_list)
-            print(change_list)
+            for d in changes:
+                change_list.append(d.text.strip())
 
-            df_station_times['station'] = station
             df_station_times['changes'] = change_list
-            df_station_times['time'] = clean_list
+            df_station_times['time'] = time_list
+            df_station_times['station'] = dep_list
+            df_station_times['to'] = dest_list
 
             print(df_station_times)
-
-            result = pd.concat([df_train_master, df_station_times])
+            df_train_master = df_train_master.append(df_station_times, ignore_index=True)
 
         except AttributeError:
             pass
 
-        return result
+    df_train_master['time'] = df_train_master['time'].replace(to_replace=r'\n\t.', value="", regex=True)
+    df_train_master[['station', 'to']] = df_train_master[['station', 'to']].replace(to_replace=r'Platform\n\t.*', value="", regex=True)
+
+    df_train_master.to_csv('/Users/OliverM/Code/PlacesToLive/data/train_times.csv')
+    return df_train_master
 
 print(get_train_times(tlc))
 
