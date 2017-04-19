@@ -61,3 +61,4 @@ target/
 data/Base_data/
 /.idea
 /.ipynb_checkpoints
+*config.py
