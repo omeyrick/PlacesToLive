@@ -3,9 +3,9 @@ Django==1.10.5
 Flask==0.12
 gunicorn==19.1.0
 itsdangerous==0.24
-Jinja2==2.9.5
+Jinja2==2.9.6
 MarkupSafe==0.23
-numpy==1.12.1
+numpy==1.11.3
 pandas==0.19.2
 PasteDeploy==1.5.2
 python-dateutil==2.6.0
